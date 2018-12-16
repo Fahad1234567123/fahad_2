@@ -1,0 +1,27 @@
+function piResponse() {
+piSetCookie('visitor_id527722', '287418963', 3650);
+piSetCookie('visitor_id527722-hash', '3343ac8c1de4675149162f910faa3c7ccc17e7fc3eca82956ad59202d89586c209f0d70df2c2e570685f15053df1042326125fd6', 3650);
+
+if (document.location.protocol != "https:" || (document.location.protocol == "https:" && true)) {
+var analytics_link = document.location.protocol + "//" + "pages.linxglobal.com/analytics?";
+pi.tracker.visitor_id='287418963';
+
+pi.tracker.visitor_id_sign='3343ac8c1de4675149162f910faa3c7ccc17e7fc3eca82956ad59202d89586c209f0d70df2c2e570685f15053df1042326125fd6';
+
+var variables = 'conly=true';
+for (property in pi.tracker) {
+	variables += "&"+property+"="+pi.tracker[property];
+}
+var headID = document.getElementsByTagName("head")[0];
+piScriptObj[piScriptNum] = document.createElement('script');
+piScriptObj[piScriptNum].type = 'text/javascript';
+piScriptObj[piScriptNum].src = analytics_link + variables;
+headID.appendChild(piScriptObj[piScriptNum]);
+piScriptObj[piScriptNum].onload = function() { return; }
+}
+}
+piResponse();
+
+
+
+
